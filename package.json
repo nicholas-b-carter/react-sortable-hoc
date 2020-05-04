@@ -42,11 +42,14 @@
     "clean:umd": "rimraf dist/umd",
     "clean:es6": "rimraf dist/es6",
     "clean:commonjs": "rimraf dist/commonjs",
-    "storybook": "start-storybook -p 9001"
+    "storybook": "start-storybook -p 9001",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "invariant": "^2.2.1",
-    "lodash": "^4.12.0"
+    "lodash": "^4.12.0",
+    "snyk": "^1.317.0"
   },
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0",
@@ -104,5 +107,6 @@
   "xo": {
     "esnext": true,
     "extends": "xo-react"
-  }
+  },
+  "snyk": true
 }
